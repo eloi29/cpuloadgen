@@ -88,7 +88,6 @@ char Reg_Define[] = "Register option selected.";
 Enumeration     Func_1();
 /* forward declaration necessary since Enumeration may not simply be int */
 
-extern char *builddate;
 extern double dtime();
 
 
@@ -223,8 +222,8 @@ int main(int argc, char *argv[])
 	 */
 	signal(SIGTERM, (sighandler_t) sigterm_handler);
 
-	printf("CPULOADGEN (REV %s built %s)\n\n",
-		CPULOADGEN_REVISION, builddate);
+	printf("CPULOADGEN (REV %s built)\n\n",
+		CPULOADGEN_REVISION);
 
 	cpu_count = (int) sysconf(_SC_NPROCESSORS_ONLN);
 	if (cpu_count < 1) {
