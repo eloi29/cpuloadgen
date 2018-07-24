@@ -1,0 +1,5 @@
+ cmake_minimum_required(VERSION 2.8)                                             
+ project(cpuloadgen)                                                             
+ find_package(Threads)
+ add_executable(cpuloadgen cpuloadgen.c dhry_21b.c timers_b.c)
+ target_link_libraries(cpuloadgen ${CMAKE_THREAD_LIBS_INIT})
